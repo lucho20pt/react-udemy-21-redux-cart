@@ -1,5 +1,5 @@
 import Card from '../UI/Card';
-import classes from './ProductItem.module.css';
+import classes from './ProductItem.module.scss';
 
 const ProductItem = (props) => {
   const { title, price, description } = props;

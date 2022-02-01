@@ -1,5 +1,5 @@
 import Card from '../UI/Card';
-import classes from './Cart.module.css';
+import classes from './Cart.module.scss';
 import CartItem from './CartItem';
 
 const Cart = (props) => {

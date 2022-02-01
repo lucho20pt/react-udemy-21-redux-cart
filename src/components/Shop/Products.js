@@ -1,5 +1,5 @@
 import ProductItem from './ProductItem';
-import classes from './Products.module.css';
+import classes from './Products.module.scss';
 
 const Products = (props) => {
   return (
