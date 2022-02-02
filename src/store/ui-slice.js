@@ -7,7 +7,11 @@ const initialUiState = {
 const uiSlice = createSlice({
   name: "ui",
   initialState: initialUiState,
-  reducers: {},
+  reducers: {
+    toggleCart(state) {
+      state.cartIsVisible = !state.cartIsVisible;
+    },
+  },
 });
 
 export const uiActions = uiSlice.actions;
