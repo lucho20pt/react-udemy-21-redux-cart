@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialUiState = {
-  cartIsVisible: true,
+  cartIsVisible: false,
 };
 
 const uiSlice = createSlice({
