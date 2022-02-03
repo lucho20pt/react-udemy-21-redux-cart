@@ -9,11 +9,11 @@ const CartButton = (props) => {
   const toggleCartHandler = () => {
     dispatch(uiActions.toggleCart());
   };
-  const totalQuantity = useSelector(state => state.cart.totalQuantity);
+  const cartQuantity = useSelector(state => state.cart.totalCartQuantity);
   return (
     <button className={classes.button} onClick={toggleCartHandler}>
       <span>My Cart</span>
-      <span className={classes.badge}>{totalQuantity}</span>
+      <span className={classes.badge}>{cartQuantity}</span>
     </button>
   );
 };

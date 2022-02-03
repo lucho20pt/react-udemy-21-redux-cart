@@ -6,13 +6,14 @@ import CartItem from "./CartItem";
 
 const Cart = (props) => {
   const cartItems = useSelector((state) => state.cart.items);
+  const totalCartPrice = useSelector((state) => state.cart.totalCartPrice);
 
   return (
     <Card className={classes.cart}>
       <h2>Your Shopping Cart</h2>
       <ul>
         {cartItems.map((item) => {
-          const { id, name, price, quantity, totalPrice } = item;
+          const { id, name, price, quantity, totalItemPrice } = item;
           return (
             <CartItem
               key={id}
@@ -20,16 +21,16 @@ const Cart = (props) => {
                 id: id,
                 title: name,
                 quantity: quantity,
-                total: totalPrice,
+                total: totalItemPrice,
                 price: price,
               }}
             />
           );
         })}
-        {/* <CartItem
-          item={{ title: 'Test Item', quantity: 3, total: 18, price: 6 }}
-        /> */}
       </ul>
+      <div>
+        total: {totalCartPrice}
+      </div>
     </Card>
   );
 };
