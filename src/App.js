@@ -7,6 +7,9 @@ import Products from "./components/Shop/Products";
 import Notification from "components/UI/Notification";
 import { uiActions } from "store/ui-slice";
 
+// first time loading check
+let isAppStarted = false;
+
 function App() {
   //
   const cartBaseUrl =
@@ -48,6 +51,11 @@ function App() {
         })
       );
     };
+
+    if (!isAppStarted) {
+      isAppStarted = true;
+      return;
+    }
 
     // execute() & catch()
     sendCartData().catch((error) => {
